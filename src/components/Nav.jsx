@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Nav.css";
 import { FaBars } from "react-icons/fa6";
-import { RiCloseFill } from "react-icons/ri";
+import { AiOutlineClose } from "react-icons/ai";
 
 const Nav = () => {
   const [mobileNav, setMobileNav] = useState(false);
@@ -19,7 +19,7 @@ const Nav = () => {
           <span className="nav-item">Contact</span>
         </div>
         <a className="hamburger" onClick={invertMobileNavState}>
-          {mobileNav ? <RiCloseFill /> : <FaBars />}
+          {mobileNav ? <AiOutlineClose /> : <FaBars />}
         </a>
       </div>
       <div className={`mobile-nav ${mobileNav && "mobile-nav-visible"}`}>
