@@ -11,8 +11,10 @@
   --teal-light: rgb(20, 184, 166);
   --teal-medium: rgb(13, 148, 136);
   --teal-dark: rgb(15, 118, 110);
+  --teal-darker: rgb(19, 78, 74);
   --teal-dark-transparent: rgba(4, 47, 46, 0.5);
   --teal-darkest: rgb(4, 47, 46);
   --white: rgb(250, 250, 250);
   --black: rgb(9, 9, 11);
+  --grey: rgb(50, 50, 50);
 }

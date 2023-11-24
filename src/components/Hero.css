@@ -1,0 +1,87 @@
+.container {
+  height: calc(100vh - 4.5rem);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+}
+
+.image-div {
+  height: 60vh;
+  width: auto;
+}
+
+.image {
+  height: 100%;
+  width: auto;
+  border-radius: 50%;
+  filter: drop-shadow(6px 6px 6px var(--teal-dark-transparent));
+}
+
+.about-text h2 {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  color: var(--teal-darkest);
+}
+
+.about-text h1 {
+  font-size: 3rem;
+  color: var(--teal-darker);
+}
+
+.about-text p {
+  color: var(--grey);
+}
+
+.btn {
+  position: relative;
+  text-transform: uppercase;
+  border: 0;
+  background-color: transparent;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 1rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  cursor: pointer;
+  border-radius: 1rem;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 1rem;
+  transform: translateX(-100%);
+  background-color: var(--teal-dark);
+  z-index: -1;
+  transition: 0.5s ease-in-out;
+}
+
+.btn:hover:before {
+  transform: translateX(0);
+}
+
+.btn-icon {
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  font-size: 1.6rem;
+  background-color: var(--teal-dark);
+  color: var(--white);
+}
+
+.btn-text {
+  padding: 0.25rem 0.75rem 0.25rem 0;
+  color: var(--black);
+  transition: 0.5s ease-in-out;
+}
+
+.btn:hover .btn-text {
+  color: var(--white);
+}

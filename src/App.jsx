@@ -7,7 +7,9 @@ const App = () => {
   return (
     <>
       <Nav />
-      <main className="wrapper"></main>
+      <main className="wrapper">
+        <Hero />
+      </main>
     </>
   );
 };
