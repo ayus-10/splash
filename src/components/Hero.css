@@ -1,9 +1,10 @@
 .container {
-  height: calc(100vh - 4.5rem);
+  min-height: calc(100vh - 4.5rem);
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 4rem;
+  overflow-x: hidden;
 }
 
 .image-div {
@@ -21,12 +22,12 @@
 .about-text h2 {
   font-size: 1.5rem;
   text-transform: uppercase;
-  color: var(--teal-darkest);
+  color: var(--teal-darker);
 }
 
 .about-text h1 {
   font-size: 3rem;
-  color: var(--teal-darker);
+  color: var(--teal-dark);
 }
 
 .about-text p {
@@ -41,8 +42,7 @@
   font-size: 1.2rem;
   font-weight: 700;
   margin: 1rem 0;
-  display: flex;
-  align-items: center;
+  padding: 0.25rem 0;
   gap: 0.25rem;
   cursor: pointer;
   border-radius: 1rem;
@@ -58,7 +58,7 @@
   height: 100%;
   width: 100%;
   border-radius: 1rem;
-  transform: translateX(-100%);
+  transform: translateX(-77%);
   background-color: var(--teal-dark);
   z-index: -1;
   transition: 0.5s ease-in-out;
@@ -72,7 +72,6 @@
   padding: 0.25rem 0.75rem;
   border-radius: 1rem;
   font-size: 1.6rem;
-  background-color: var(--teal-dark);
   color: var(--white);
 }
 
@@ -84,4 +83,33 @@
 
 .btn:hover .btn-text {
   color: var(--white);
+}
+
+@media screen and (max-width: 960px) {
+  .container {
+    padding-top: 1.5rem;
+    gap: 1.5rem;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .image-div {
+    height: 30vh;
+  }
+
+  .about-text {
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .about-text h2 {
+    font-size: 1.2rem;
+  }
+
+  .about-text h1 {
+    font-size: 1.8rem;
+  }
 }

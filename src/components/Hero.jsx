@@ -19,8 +19,8 @@ const Hero = () => {
           laborum beatae. Voluptas laboriosam quia omnis quisquam natus
           adipisci? Eligendi, commodi.
         </p>
-        <button className="btn">
-          <span className="btn-icon">&rArr;</span>
+        <button className="btn" type="button">
+          <span className="btn-icon">&rarr;</span>
           <span className="btn-text">Work with me</span>
         </button>
       </div>
