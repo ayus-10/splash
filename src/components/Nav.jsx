@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-scroll";
 import "./Nav.css";
 import { FaBars } from "react-icons/fa6";
@@ -11,6 +11,10 @@ const Nav = (props) => {
   };
 
   const navItemList = ["services", "work", "contact"];
+
+  useEffect(() => {
+    setMobileNav(false);
+  }, [props.activeComponent]);
 
   return (
     <header className="nav">
