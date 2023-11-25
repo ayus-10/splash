@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-scroll";
 import "./Nav.css";
 import { FaBars } from "react-icons/fa6";
 import { AiOutlineClose } from "react-icons/ai";
@@ -9,40 +10,61 @@ const Nav = (props) => {
     setMobileNav(!mobileNav);
   };
 
+  const navItemList = ["services", "work", "contact"];
+
   return (
     <header className="nav">
       <div className="navbar">
-        <h1 className="nav-logo" onClick={() => props.onButtonClick("home")}>
+        <Link
+          className="nav-logo"
+          to="home"
+          activeClass="home"
+          spy={true}
+          smooth={true}
+          offset={-72}
+          duration={500}
+          onClick={() => props.changeActiveComponent("home")}
+        >
           Splash.
-        </h1>
+        </Link>
         <div className="nav-items">
-          <span
-            className="nav-item"
-            onClick={() => props.onButtonClick("services")}
-          >
-            Services
-          </span>
-          <span
-            className="nav-item"
-            onClick={() => props.onButtonClick("work")}
-          >
-            Work
-          </span>
-          <span
-            className="nav-item"
-            onClick={() => props.onButtonClick("contact")}
-          >
-            Contact
-          </span>
+          {navItemList.map((navItem, index) => (
+            <Link
+              key={index}
+              to={navItem}
+              activeClass={navItem}
+              spy={true}
+              smooth={true}
+              offset={-72}
+              duration={500}
+              className={`nav-item ${
+                props.activeComponent === navItem && "active"
+              }`}
+              onClick={() => props.changeActiveComponent(navItem)}
+            >
+              {navItem.toUpperCase()}
+            </Link>
+          ))}
         </div>
         <a className="hamburger" onClick={invertMobileNavState}>
           {mobileNav ? <AiOutlineClose /> : <FaBars />}
         </a>
       </div>
       <div className={`mobile-nav ${mobileNav && "mobile-nav-visible"}`}>
-        <span onClick={() => props.onButtonClick("services")}>Services</span>
-        <span onClick={() => props.onButtonClick("work")}>Work</span>
-        <span onClick={() => props.onButtonClick("contact")}>Contact</span>
+        {navItemList.map((navItem, index) => (
+          <Link
+            key={index}
+            to={navItem}
+            activeClass={navItem}
+            spy={true}
+            smooth={true}
+            offset={-72}
+            duration={500}
+            onClick={() => props.changeActiveComponent(navItem)}
+          >
+            {navItem.toUpperCase()}
+          </Link>
+        ))}
       </div>
     </header>
   );

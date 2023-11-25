@@ -1,4 +1,4 @@
-.container {
+.hero-container {
   min-height: calc(100vh - 4.5rem);
   display: flex;
   justify-content: center;
@@ -43,7 +43,7 @@
   font-weight: 700;
   margin: 1rem 0;
   padding: 0.25rem 0;
-  gap: 0.25rem;
+  display: flex;
   cursor: pointer;
   border-radius: 1rem;
   z-index: 1;
@@ -73,6 +73,9 @@
   border-radius: 1rem;
   font-size: 1.6rem;
   color: var(--white);
+  display: flex;
+  align-items: center;
+  transition: 0.5s ease-in-out;
 }
 
 .btn-text {
@@ -81,12 +84,16 @@
   transition: 0.5s ease-in-out;
 }
 
+.btn:hover .btn-icon {
+  transform: translateX(0.25rem);
+}
+
 .btn:hover .btn-text {
   color: var(--white);
 }
 
 @media screen and (max-width: 960px) {
-  .container {
+  .hero-container {
     padding-top: 1.5rem;
     gap: 1.5rem;
     flex-direction: column;

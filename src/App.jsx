@@ -14,12 +14,15 @@ const App = () => {
 
   return (
     <>
-      <Nav onButtonClick={changeActiveComponent} />
+      <Nav
+        changeActiveComponent={changeActiveComponent}
+        activeComponent={activeComponent}
+      />
       <main className="wrapper">
-        {activeComponent === "home" && <Hero />}
-        {activeComponent === "services" && <Services />}
-        {activeComponent === "work" && <Work />}
-        {activeComponent === "contact" && <Contact />}
+        <Hero />
+        <Services />
+        <Work />
+        <Contact />
       </main>
     </>
   );

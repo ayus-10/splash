@@ -1,10 +1,11 @@
 import React from "react";
 import "./Hero.css";
 import image from "../assets/portrait.jpg";
+import { IoIosArrowForward } from "react-icons/io";
 
 const Hero = () => {
   return (
-    <div className="container">
+    <div className="hero-container" id="home">
       <div className="image-div">
         <img className="image" src={image} alt="my-portrait" />
       </div>
@@ -20,7 +21,9 @@ const Hero = () => {
           adipisci? Eligendi, commodi.
         </p>
         <button className="btn" type="button">
-          <span className="btn-icon">&rarr;</span>
+          <span className="btn-icon">
+            <IoIosArrowForward />
+          </span>
           <span className="btn-text">Work with me</span>
         </button>
       </div>
