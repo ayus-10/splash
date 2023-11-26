@@ -1,3 +1,62 @@
 .work-container {
-  min-height: calc(100vh - 4.5rem);
+  height: calc(100vh - 4.5rem);
+}
+
+.carousel {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-images {
+  position: relative;
+  height: 100%;
+  width: 60vw;
+}
+
+.carousel-image {
+  position: absolute;
+  margin: auto;
+  inset: 0;
+  width: 100%;
+}
+
+.carousel-btn {
+  height: fit-content;
+  border: 0;
+  padding: 1rem 0.25rem;
+  font-size: 2rem;
+  color: var(--white);
+  background-color: var(--teal-dark);
+  transition: 0.2s ease-in-out;
+  display: grid;
+  place-items: center;
+}
+
+.carousel-btn svg {
+  position: relative;
+  transition: 0.2s ease-in-out;
+}
+
+.carousel-btn:hover {
+  background-color: var(--teal-darker);
+}
+
+.left {
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+}
+
+.right {
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+
+.left:hover svg {
+  transform: translateX(-0.125rem);
+}
+
+.right:hover svg {
+  transform: translateX(0.125rem);
 }
