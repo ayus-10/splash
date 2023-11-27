@@ -51,8 +51,8 @@ const Services = () => {
     <div className="services-container" id="services">
       <h1 className="services-title">My Services</h1>
       <ul className="services-list">
-        {servicesList.map((serviceItem) => (
-          <li className="list-item">
+        {servicesList.map((serviceItem, index) => (
+          <li className="list-item" key={index}>
             <span className="list-item-icon">{serviceItem.icon}</span>
             <span className="list-item-text">{serviceItem.name}</span>
           </li>
