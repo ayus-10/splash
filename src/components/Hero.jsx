@@ -6,8 +6,8 @@ import { IoIosArrowForward } from "react-icons/io";
 const Hero = () => {
   return (
     <div className="hero-container" id="home">
-      <div className="image-div">
-        <img className="image" src={image} alt="my-portrait" />
+      <div className="hero-image">
+        <img className="image" src={image} alt="My portrait" />
       </div>
       <div className="about-text">
         <h2>Welcome to my Portfolio</h2>
@@ -20,11 +20,11 @@ const Hero = () => {
           laborum beatae. Voluptas laboriosam quia omnis quisquam natus
           adipisci? Eligendi, commodi.
         </p>
-        <button className="btn" type="button">
-          <span className="btn-icon">
+        <button className="hero-btn" type="button">
+          <span className="hero-btn-icon">
             <IoIosArrowForward />
           </span>
-          <span className="btn-text">Work with me</span>
+          <span className="hero-btn-text">Work with me</span>
         </button>
       </div>
     </div>

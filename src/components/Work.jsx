@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./Work.css";
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
-import { get } from "react-scroll/modules/mixins/scroller";
 
 const Work = () => {
   const images = [
@@ -53,8 +52,10 @@ const Work = () => {
   return (
     <div className="work-container" id="work">
       <div className="carousel">
+        <h1 className="carousel-title">Work Gallery</h1>
         <button className="left carousel-btn" type="button" onClick={slideLeft}>
           <IoIosArrowBack />
+          <span className="carousel-btn-text">Back</span>
         </button>
         <div className="carousel-images">
           {images.map((image, index) => (
@@ -71,6 +72,7 @@ const Work = () => {
           type="button"
           onClick={slideRight}
         >
+          <span className="carousel-btn-text">Next</span>
           <IoIosArrowForward />
         </button>
       </div>
