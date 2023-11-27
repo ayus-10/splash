@@ -90,7 +90,7 @@
     margin: 0 auto;
     font-size: 2rem;
     width: 100%;
-    padding: 0.5rem 1rem;
+    padding: 0.25rem;
   }
 
   .carousel-images {
@@ -104,6 +104,7 @@
   .carousel-btn {
     width: 50%;
     position: absolute;
+    padding: 0.25rem;
     bottom: 10vh;
     z-index: 1;
     display: flex;
