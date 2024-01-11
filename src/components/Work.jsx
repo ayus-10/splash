@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useRef, useEffect } from "react";
 import "./Work.css";
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
 
@@ -14,7 +14,7 @@ const Work = () => {
     carouselDefault();
   }, []);
 
-  let count = 0;
+  const count = useRef(0);
 
   const getImageElements = () => document.querySelectorAll(".carousel-image");
 
@@ -28,23 +28,23 @@ const Work = () => {
   const slideImage = () => {
     const imageElements = getImageElements();
     imageElements.forEach((imageElement) => {
-      imageElement.style.transform = `translateX(-${100 * count}%)`;
+      imageElement.style.transform = `translateX(-${100 * count.current}%)`;
     });
   };
 
   const slideLeft = () => {
-    if (count > 0) {
-      count--;
+    if (count.current > 0) {
+      count.current--;
     }
     slideImage();
   };
 
   const slideRight = () => {
     const lastCount = getImageElements().length - 1;
-    if (count < lastCount) {
-      count++;
+    if (count.current < lastCount) {
+      count.current++;
     } else {
-      count = 0;
+      count.current = 0;
     }
     slideImage();
   };
